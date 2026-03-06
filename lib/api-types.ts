@@ -14,6 +14,7 @@ export interface EnvironmentDoc {
 export interface RequestDoc extends RequestDef {
   _id: string;
   name: string;
+  folderPath?: string[];
   method: RequestDef["method"];
   url: string;
   headers?: KeyValueRow[];

@@ -1,0 +1,788 @@
+{
+  "info": {
+    "_postman_id": "1f8d7dd6-9bdb-4986-913f-358b8ba03956",
+    "name": "Rhenti-tenant-coverage",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23645005",
+    "_collection_link": "https://go.postman.co/collection/23645005-1f8d7dd6-9bdb-4986-913f-358b8ba03956?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Walnut",
+      "item": [
+        {
+          "name": "test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/offer/67468cd45dcdd079835ad2fb",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "offer",
+                "67468cd45dcdd079835ad2fb"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - Direct",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-api-key",
+                "value": "8a80e0052ad7f3e1dea03ca49884befa1712222886129f4e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Satya\",\r\n    \"lastName\": \"Test\",\r\n    \"email\": \"satyakoppisetti+7@gmail.com\",\r\n    \"address\": {\r\n        \"streetLine1\": \"100 Bird St\",\r\n        \"city\": \"Barrie\",\r\n        \"countryCode\": \"CA\",\r\n        \"isAddressValidated\": true,\r\n        \"addressValidationProvider\": \"GoogleMaps\",\r\n        \"unit\": \"1906\",\r\n        \"province\": \"ON\",\r\n        \"postalCode\": \"L4N 0X3\"\r\n    },\r\n    \"phone\": \"+1 (987) 654-3210\",\r\n    \"productCode\": \"CA-RHENTI-MSI-000021\",\r\n    \"effectiveDate\": \"2021-11-01\",\r\n    \"termType\": \"monthly\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://partner.api.gowalnut.com/group-tenant/user",
+              "protocol": "https",
+              "host": [
+                "partner",
+                "api",
+                "gowalnut",
+                "com"
+              ],
+              "path": [
+                "group-tenant",
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete policy - direct",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-api-key",
+                "value": "8a80e0052ad7f3e1dea03ca49884befa1712222886129f4e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"effectiveDate\": \"2021-11-08\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://partner.api.gowalnut.xyz/group-tenant/user/3e889f26-6b1e-49cc-bcdb-0f97e4359b56/policy/e6ecba9b-ad04-4aa3-81e4-f936288648a6/coverage",
+              "protocol": "https",
+              "host": [
+                "partner",
+                "api",
+                "gowalnut",
+                "xyz"
+              ],
+              "path": [
+                "group-tenant",
+                "user",
+                "3e889f26-6b1e-49cc-bcdb-0f97e4359b56",
+                "policy",
+                "e6ecba9b-ad04-4aa3-81e4-f936288648a6",
+                "coverage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user - direct",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "84c3ce090195244f1e6804e1faac07a8534c580edf2b9b7e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://partner.api.gowalnut.com/group-tenant/user/a26f2b4a-c101-4727-9af9-e301e6280f06",
+              "protocol": "https",
+              "host": [
+                "partner",
+                "api",
+                "gowalnut",
+                "com"
+              ],
+              "path": [
+                "group-tenant",
+                "user",
+                "a26f2b4a-c101-4727-9af9-e301e6280f06"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Address - direct",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "84c3ce090195244f1e6804e1faac07a8534c580edf2b9b7e",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"effectiveDate\":\"2026-02-01\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://partner.api.gowalnut.com/group-tenant/user/909c719d-1a5a-4913-aa72-38a95df5f47f/policy/58147596-19d0-4cb1-b742-c55fdb1bca5f/coverage",
+              "protocol": "https",
+              "host": [
+                "partner",
+                "api",
+                "gowalnut",
+                "com"
+              ],
+              "path": [
+                "group-tenant",
+                "user",
+                "909c719d-1a5a-4913-aa72-38a95df5f47f",
+                "policy",
+                "58147596-19d0-4cb1-b742-c55fdb1bca5f",
+                "coverage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get policy certificate - Direct",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "84c3ce090195244f1e6804e1faac07a8534c580edf2b9b7e",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://partner.api.gowalnut.com/group-tenant/user/307546ba-c486-4255-a688-9f6177488689/policy/dc6d0bde-a739-4d93-9122-322b650edeb0/certificate",
+              "protocol": "https",
+              "host": [
+                "partner",
+                "api",
+                "gowalnut",
+                "com"
+              ],
+              "path": [
+                "group-tenant",
+                "user",
+                "307546ba-c486-4255-a688-9f6177488689",
+                "policy",
+                "dc6d0bde-a739-4d93-9122-322b650edeb0",
+                "certificate"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "BO",
+      "item": [
+        {
+          "name": "List all packages",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List all user policies",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/policies",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "policies"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Policy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Default Policy\",\r\n    \"products\":[\r\n        {\r\n            \"code\":\"abc\",\r\n            \"price\":21,\r\n            \"coverageAmount\":5000\r\n        },\r\n        {\r\n            \"code\":\"def\",\r\n            \"price\":23,\r\n            \"coverageAmount\":10000\r\n        },\r\n        {\r\n            \"code\":\"ghi\",\r\n            \"price\":26,\r\n            \"coverageAmount\":15000\r\n        }\r\n    ],\r\n    \"whitelabels\":[\r\n        {\r\n            \"whitelabel\":\"6153584f3164c30038038704\",\r\n            \"buildings\":[]\r\n        }\r\n    ]\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "retry Subscription For Policy Api",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/retrySubscription/6732d7a9ea4d8d16e902486d",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "retrySubscription",
+                "6732d7a9ea4d8d16e902486d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "handle success payment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/handle-success/67c21a0b158a863d68ca7c0e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "handle-success",
+                "67c21a0b158a863d68ca7c0e"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "App",
+      "item": [
+        {
+          "name": "get package for property",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/forproperty/61a1362709e0590039aab5b4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "forproperty",
+                "61a1362709e0590039aab5b4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Latest Policy for Offer",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/latestpolicyforoffer/6704d0fb52547c1044965299",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "latestpolicyforoffer",
+                "6704d0fb52547c1044965299"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel Policy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/cancelpolicy/695c2e5ee44ee69b3ca89b38",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "cancelpolicy",
+                "695c2e5ee44ee69b3ca89b38"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remind to optin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/remindToOptin/672e4d78f2b7a7538bd002b0",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "remindToOptin",
+                "672e4d78f2b7a7538bd002b0"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "isCoverageEnabled",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              },
+              {
+                "key": "x-white-label",
+                "value": "hazelviewuat",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/isEnabled",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "isEnabled"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "change Policy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"code\":\"CA-RHENTI-MSI-000022\",\r\n    \"price\":\"26.55\",\r\n    \"amount\":\"15000\",\r\n    \"payment_method_id\":\"pm_1Q7TVdLRTX4zssMaDTsz1s8V\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/changeCoveragePolicy/672de0fb8d4e1747eb9c1d43",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "changeCoveragePolicy",
+                "672de0fb8d4e1747eb9c1d43"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Payment Method",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"payment_method_id\":\"pm_1QNUTYLRTX4zssMaNp9jOfSp\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/updatePaymentMethod/673ec0a8b2c925aae8e7e3ba",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "updatePaymentMethod",
+                "673ec0a8b2c925aae8e7e3ba"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update Effective Date",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"effectiveDate\":\"2025-05-29\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/updateEffectiveDate/6824fa7f4d31a33ee900bd30",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "updateEffectiveDate",
+                "6824fa7f4d31a33ee900bd30"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retry Tc for Offer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/offer/69437031d6c20ca7606bd5aa",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "offer",
+                "69437031d6c20ca7606bd5aa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Handle Payment success",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"policyId\":\"697b888b34c4db8f90259a12\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/tenant-coverage/handlePaymentSuccess",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "tenant-coverage",
+                "handlePaymentSuccess"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Testing",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{adminToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/rhenti/scripts/chat-threads-fix-updated-at",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "rhenti",
+                "scripts",
+                "chat-threads-fix-updated-at"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ const RequestSchema = new Schema(
   {
     _id: { type: String, default: () => crypto.randomUUID() },
     name: String,
+    folderPath: { type: [String], default: undefined },
     method: {
       type: String,
       enum: ["GET", "POST", "PUT", "PATCH", "DELETE"],

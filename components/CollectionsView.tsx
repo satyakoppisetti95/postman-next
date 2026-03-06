@@ -7,6 +7,7 @@ import type { CollectionDoc, EnvironmentDoc, RequestDoc, SelectedNode } from "@/
 import CollectionsSidebar from "./CollectionsSidebar";
 import RequestEditor from "./RequestEditor";
 import ResponseViewer from "./ResponseViewer";
+import ImportPostmanModal from "./ImportPostmanModal";
 import type { RunResult } from "@/lib/requestRunner";
 
 interface CollectionsViewProps {
@@ -26,6 +27,7 @@ export default function CollectionsView({
   const [response, setResponse] = useState<RunResult | null>(null);
   const [saving, setSaving] = useState(false);
   const [collectionNameEdit, setCollectionNameEdit] = useState("");
+  const [showImportModal, setShowImportModal] = useState(false);
 
   const selectedCollection = selectedNode?.type === "collection"
     ? collections.find((c) => c._id === selectedNode.id)
@@ -41,7 +43,7 @@ export default function CollectionsView({
     if (selectedNode?.type === "collection" && selectedCollection) {
       setCollectionNameEdit(selectedCollection.name);
     }
-  }, [selectedNode?.type, selectedNode?.id, selectedCollection?.name]);
+  }, [selectedNode?.type, selectedCollection?._id, selectedCollection?.name]);
 
   const selectedEnv = selectedEnvId
     ? environments.find((e) => e._id === selectedEnvId)
@@ -213,6 +215,28 @@ export default function CollectionsView({
     signOut({ callbackUrl: "/auth/login" });
   }
 
+  const handleImportPostman = useCallback(
+    async (name: string, requests: RequestDoc[]) => {
+      const res = await fetch("/api/collections", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name }),
+      });
+      if (!res.ok) throw new Error("Failed to create collection");
+      const col = await res.json();
+      const putRes = await fetch(`/api/collections/${col._id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, description: "", requests }),
+      });
+      if (!putRes.ok) throw new Error("Failed to add requests");
+      const updated = await putRes.json();
+      setCollections((prev) => [updated, ...prev]);
+      setSelectedNode({ type: "collection", id: updated._id });
+    },
+    []
+  );
+
   return (
     <>
       <header className="flex items-center justify-between border-b border-slate-800 px-4 py-2">
@@ -256,7 +280,14 @@ export default function CollectionsView({
             onAddRequest={handleAddRequest}
             onDeleteCollection={handleDeleteCollection}
             onDeleteRequest={handleDeleteRequest}
+            onImportPostman={() => setShowImportModal(true)}
           />
+          {showImportModal && (
+            <ImportPostmanModal
+              onClose={() => setShowImportModal(false)}
+              onImport={handleImportPostman}
+            />
+          )}
         </aside>
 
         <main className="flex-1 flex flex-col min-w-0">

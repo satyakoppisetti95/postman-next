@@ -26,6 +26,7 @@ export interface RequestAuth {
 export interface RequestDef {
   _id?: string;
   name: string;
+  folderPath?: string[];
   method: HttpMethod;
   url: string;
   headers?: KeyValueRow[];

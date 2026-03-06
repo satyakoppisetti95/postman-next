@@ -1,0 +1,1740 @@
+{
+  "info": {
+    "_postman_id": "a8f4f0bc-444b-4d78-9c78-c5d17066018b",
+    "name": "rentcafe",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23645005",
+    "_collection_link": "https://go.postman.co/collection/23645104-a8f4f0bc-444b-4d78-9c78-c5d17066018b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "generate token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "username",
+              "value": "contact@rhenti.com",
+              "description": "Vendor User Name",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "fusvo3-mumgev-Gapror",
+              "description": "Vendor Password",
+              "type": "text"
+            },
+            {
+              "key": "client_id",
+              "value": "rentcafeapiportal_apiaccess",
+              "description": "client id would be provided by yardi",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://rentcafeapiportal.yardione.com/connect/token",
+          "protocol": "https",
+          "host": [
+            "rentcafeapiportal",
+            "yardione",
+            "com"
+          ],
+          "path": [
+            "connect",
+            "token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "error response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "vendorusername",
+                  "description": "Vendor User Name",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "vendorpassword",
+                  "description": "Vendor Password",
+                  "type": "text"
+                },
+                {
+                  "key": "client_id",
+                  "value": "clientid",
+                  "description": "client id would be provided by yardi",
+                  "type": "text"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rentcafeapiportal.yardione.com/connect/token",
+              "protocol": "https",
+              "host": [
+                "rentcafeapiportal",
+                "yardione",
+                "com"
+              ],
+              "path": [
+                "connect",
+                "token"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 03 Jun 2022 17:11:50 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, max-age=0"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "X-Server",
+              "value": "yardione-server-prod-22-01-server-7d57b64d6-mmx2k"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "frame-ancestors 'self'"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.0.63.116:5000"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "yardione-nginx-prod-1-58dc5cb7fd-4zwfm"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "YardiOne Server - w3"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Expect-CT",
+              "value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "715a0cdc8f187c41-LAX"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"error\": \"invalid_client\"\n}"
+        },
+        {
+          "name": "success response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "liveapircqa@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "APITesting@12345",
+                  "type": "text"
+                },
+                {
+                  "key": "client_id",
+                  "value": "rentcafeapiportal_apiaccess",
+                  "type": "text"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "password",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rentcafeapiportal.yardione.com/connect/token",
+              "protocol": "https",
+              "host": [
+                "rentcafeapiportal",
+                "yardione",
+                "com"
+              ],
+              "path": [
+                "connect",
+                "token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Fri, 03 Jun 2022 17:15:42 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, max-age=0"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "X-Server",
+              "value": "yardione-server-prod-22-01-server-7d57b64d6-bv6rr"
+            },
+            {
+              "key": "Content-Security-Policy",
+              "value": "frame-ancestors 'self'"
+            },
+            {
+              "key": "X-Service",
+              "value": "yardione-server-prod-22-01-server.yardione.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.0.63.116:5000"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "yardione-nginx-prod-1-58dc5cb7fd-whscl"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "YardiOne Server - w3"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Expect-CT",
+              "value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "715a1285bdd77c41-LAX"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"access_token\": \"access_token\",\n    \"expires_in\": 7200,\n    \"token_type\": \"Bearer\",\n    \"refresh_token\": \"refresh_token\",\n    \"scope\": \"API offline_access openid\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "generate token with refresh grant",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "rentcafeapiportal_apiaccess",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "refresh_token",
+              "type": "text"
+            },
+            {
+              "key": "refresh_token",
+              "value": "8FD1500A3E7C78AB5994749E5C1C03127B8EE7C8210FB7D052B606E056702FC5-1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://rentcafeapiportal.yardione.com/connect/token",
+          "protocol": "https",
+          "host": [
+            "rentcafeapiportal",
+            "yardione",
+            "com"
+          ],
+          "path": [
+            "connect",
+            "token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "client_id",
+                  "value": "rentcafeapiportal_apiaccess",
+                  "type": "text"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "refresh_token",
+                  "type": "text"
+                },
+                {
+                  "key": "refresh_token",
+                  "value": "8FD1500A3E7C78AB5994749E5C1C03127B8EE7C8210FB7D052B606E056702FC5-1",
+                  "type": "text"
+                }
+              ],
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://rentcafeapiportal.yardione.com/connect/token",
+              "protocol": "https",
+              "host": [
+                "rentcafeapiportal",
+                "yardione",
+                "com"
+              ],
+              "path": [
+                "connect",
+                "token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 23 Jan 2025 14:56:48 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=UTF-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-store, no-cache, max-age=0"
+            },
+            {
+              "key": "Pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "no-referrer"
+            },
+            {
+              "key": "X-Permitted-Cross-Domain-Policies",
+              "value": "none"
+            },
+            {
+              "key": "Cross-Origin-Embedder-Policy",
+              "value": "unsafe-none"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin-allow-popups"
+            },
+            {
+              "key": "Cross-Origin-Resource-Policy",
+              "value": "cross-origin"
+            },
+            {
+              "key": "Permissions-Policy",
+              "value": "geolocation=*"
+            },
+            {
+              "key": "Accept-CH",
+              "value": "Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "YardiOne Server - Portal"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=15552000; includeSubDomains"
+            },
+            {
+              "key": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "9068a1ee3d61abf7-YYZ"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczNzY0NDIwOCwiaWF0IjoxNzM3NjQ0MjA4LCJleHAiOjE3Mzc2NTE0MDgsImF1ZCI6InJlbnRjYWZlYXBpcG9ydGFsX2FwaWFjY2VzcyIsImFtciI6WyJwd2QiXSwiYXRfaGFzaCI6IlN2al94ZEdpU0hPT0VBc2ozaTZPSkEiLCJzdWIiOiI1ZDJkOWIwMS02ZGI4LTQ3MzctYjJiMS0yZTZlNTJmZGExNjMiLCJhdXRoX3RpbWUiOjE3Mzc2NDMzODEsImlkcCI6ImxvY2FsIn0.T9rv-7uoMaZc-32fwBeOkiKxUJGPtnkZIhiVbngCoCXygXFaSAvHfdfy44DMdYVvT4HqRtp1cHDRq9uUdCFqNbB31805utm_Mg1U67IAPgk8n0dzHTLANyUH2vC2LDXdHYTiWscD_S7YZ4hDPPIBuNdPstv5sYWS65lbI1-mVniu6kVi0QXHzvnCSNFeH8Tc3N1oO3vE_ox0tLPmdH6VnctP2tJ-XYgBpIMSwHXV5wOoZFs1qupNA51Ff6zaY1A1ERqEmtG2F_HSq0Ctv1vWoTUtzDRx9BztYnzX0Ee3PdznOIqhufOBsCCA0DtF75a22tTUa5lh3WzpdUvuY44f5w\",\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczNzY0NDIwOCwiaWF0IjoxNzM3NjQ0MjA4LCJleHAiOjE3Mzc2NzMwMDgsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM3NjQzMzgxLCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRDgxQzVDQUNGQUQwQjZGOEZFQjdFRTM5NkE3ODE4NDYifQ.PWybOQS3hfW2Plzz7-K_WBK1njxysJMAH7UbxUVJ5Pd2GvN4rxM0fZFA2W4Y2QrGsDQE8b9h5_8Sn4ywPNxHTXAhJjPJ0HFHDNVGrc7TppoTRtmIPlzgVS-jJqVPx_NMpuEnEaZGqnZv-S-qqgdbGmoUSLbs0MrEMJ3r632Sh53Wy57TX1iYJe4R-jEAgauYcP7y0FXFBUr6BqiqHC_BMQvr1wWnHEDCGb3lGNljTIdfQ80sZ0Vc2ZGNGXfsaw-rZ0r6UB1vyeOkMZZ8h9MN9k03zlUcJ83pcxldT3C5fKqhLz1TF2ucCG-ee7nanxK_T91wdmdYXo2r4KUiP3Yosg\",\n    \"expires_in\": 28800,\n    \"token_type\": \"Bearer\",\n    \"refresh_token\": \"B011FB6F15B26D5BEA179F6BB989EA5B423061EBCC156D06A41F339C15F6755F-1\",\n    \"scope\": \"API offline_access openid\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get property mappings",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjlDNDZCQ0Y2N0FEQTFGNTk3REE5MjQxNDM2ODdCQ0IyRkIwOTYwNkRSUzI1NiIsIng1dCI6Im5FYTg5bnJhSDFsOXFTUVVOb2U4c3ZzSllHMCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTc2NjUxODE2NSwiaWF0IjoxNzY2NTE4MTY1LCJleHAiOjE3NjY1NDY5NjUsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzY2NTE4MTY1LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMUVFRTBBNTZFNkZDNzFBMkMyMjJDNDQ0OEI2MjMxNEIifQ.TjX-RgUk9_WVMfgCz2z9LsdcHJrU5kbkjncG5XhXFddGLIr_YSfyF6SndzzBTR0w_Z0-JU5DfmWClHGTjOT_D49DgRUSZiIflQFn_7kxgE_cGUf-IsCMGOnw2BHE4wYnaThTs4XIkWyGCGh_i6DNggWcsFBRR0ob9libds-VNhuZ3tOeIbgBGKOevkCGVEpMl1pwoqanx6rr0RsvWDE93bNT-GWEHoC-NmJ_nhv_h7NBJQJz9OeCczOODfrrQ3D59JfWr_X25dnEB-SQkNWftd2lBSRJZqMTAOkHCU7SHrT0295pANP4kO-wfXsWVDJSbZR1CPvYjFWOF_P0lw-oFg",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/property/getpropertymappings",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "property",
+            "getpropertymappings"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/property/getpropertymappings",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "property",
+                "getpropertymappings"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 04 Feb 2025 16:17:08 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "90cbf81b5a06ac7e-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"propertyMappings\": [\n        {\n            \"propertyName\": \"Credo\",\n            \"propertyCode\": \"p1640828\",\n            \"propertyId\": 1672608,\n            \"voyagerPropertyCode\": \"credo\",\n            \"voyagerPropertyId\": 25\n        },\n        {\n            \"propertyName\": \"Evoke- Corporate\",\n            \"propertyCode\": \"p1914049\",\n            \"propertyId\": 1946644,\n            \"voyagerPropertyCode\": \"evokcorp\",\n            \"voyagerPropertyId\": 57\n        },\n        {\n            \"propertyName\": \"Lavida\",\n            \"propertyCode\": \"p1748691\",\n            \"propertyId\": 1780846,\n            \"voyagerPropertyCode\": \".lavida\",\n            \"voyagerPropertyId\": 46\n        },\n        {\n            \"propertyName\": \"Lavida - Building A\",\n            \"propertyCode\": \"p1748671\",\n            \"propertyId\": 1780826,\n            \"voyagerPropertyCode\": \"lavidaa\",\n            \"voyagerPropertyId\": 44\n        },\n        {\n            \"propertyName\": \"Lavida- Building B\",\n            \"propertyCode\": \"p1748673\",\n            \"propertyId\": 1780828,\n            \"voyagerPropertyCode\": \"lavidab\",\n            \"voyagerPropertyId\": 45\n        },\n        {\n            \"propertyName\": \"Lumina\",\n            \"propertyCode\": \"p1670345\",\n            \"propertyId\": 1702242,\n            \"voyagerPropertyCode\": \".lumina\",\n            \"voyagerPropertyId\": 39\n        },\n        {\n            \"propertyName\": \"Lumina - Australis\",\n            \"propertyCode\": \"p1669321\",\n            \"propertyId\": 1701215,\n            \"voyagerPropertyCode\": \"lumiaust\",\n            \"voyagerPropertyId\": 35\n        },\n        {\n            \"propertyName\": \"Lumina - Borealis\",\n            \"propertyCode\": \"p1670282\",\n            \"propertyId\": 1702179,\n            \"voyagerPropertyCode\": \"lumibore\",\n            \"voyagerPropertyId\": 36\n        },\n        {\n            \"propertyName\": \"Lumina - Celestial\",\n            \"propertyCode\": \"p1670308\",\n            \"propertyId\": 1702205,\n            \"voyagerPropertyCode\": \"lumicele\",\n            \"voyagerPropertyId\": 37\n        },\n        {\n            \"propertyName\": \"Marakai\",\n            \"propertyCode\": \"p1795922\",\n            \"propertyId\": 1828066,\n            \"voyagerPropertyCode\": \"maracorp\",\n            \"voyagerPropertyId\": 47\n        },\n        {\n            \"propertyName\": \"Marakai- Building A\",\n            \"propertyCode\": \"p1807624\",\n            \"propertyId\": 1839813,\n            \"voyagerPropertyCode\": \"marakaia\",\n            \"voyagerPropertyId\": 48\n        },\n        {\n            \"propertyName\": \"Marakai- Building B\",\n            \"propertyCode\": \"p1807627\",\n            \"propertyId\": 1839816,\n            \"voyagerPropertyCode\": \"marakaib\",\n            \"voyagerPropertyId\": 49\n        },\n        {\n            \"propertyName\": \"Marakai- Building C\",\n            \"propertyCode\": \"p1807628\",\n            \"propertyId\": 1839817,\n            \"voyagerPropertyCode\": \"marakaic\",\n            \"voyagerPropertyId\": 50\n        },\n        {\n            \"propertyName\": \"Skygreen\",\n            \"propertyCode\": \"p1605801\",\n            \"propertyId\": 1637481,\n            \"voyagerPropertyCode\": \".skygree\",\n            \"voyagerPropertyId\": 26\n        },\n        {\n            \"propertyName\": \"Skygreen - Parkside Building\",\n            \"propertyCode\": \"p1295988\",\n            \"propertyId\": 1325780,\n            \"voyagerPropertyCode\": \"SkyPark\",\n            \"voyagerPropertyId\": 11\n        },\n        {\n            \"propertyName\": \"Skygreen - Pondside Building\",\n            \"propertyCode\": \"p1295397\",\n            \"propertyId\": 1325188,\n            \"voyagerPropertyCode\": \"SkyPond\",\n            \"voyagerPropertyId\": 12\n        },\n        {\n            \"propertyName\": \"Sterling Square\",\n            \"propertyCode\": \"p1605807\",\n            \"propertyId\": 1637487,\n            \"voyagerPropertyCode\": \".sterlin\",\n            \"voyagerPropertyId\": 28\n        },\n        {\n            \"propertyName\": \"Sterling Square - Aurora\",\n            \"propertyCode\": \"p1471170\",\n            \"propertyId\": 1501834,\n            \"voyagerPropertyCode\": \"Sterauro\",\n            \"voyagerPropertyId\": 18\n        },\n        {\n            \"propertyName\": \"Sterling Square - Beacon\",\n            \"propertyCode\": \"p1343437\",\n            \"propertyId\": 1373372,\n            \"voyagerPropertyCode\": \"Sterbeac\",\n            \"voyagerPropertyId\": 17\n        },\n        {\n            \"propertyName\": \"Sterling Square - Presto\",\n            \"propertyCode\": \"p1420214\",\n            \"propertyId\": 1450520,\n            \"voyagerPropertyCode\": \"Sterpres\",\n            \"voyagerPropertyId\": 19\n        },\n        {\n            \"propertyName\": \"Sterling Square - Trill\",\n            \"propertyCode\": \"p1490006\",\n            \"propertyId\": 1521005,\n            \"voyagerPropertyCode\": \"Stertril\",\n            \"voyagerPropertyId\": 20\n        },\n        {\n            \"propertyName\": \"The Station\",\n            \"propertyCode\": \"p1605799\",\n            \"propertyId\": 1637479,\n            \"voyagerPropertyCode\": \".station\",\n            \"voyagerPropertyId\": 27\n        },\n        {\n            \"propertyName\": \"The Station - Building A\",\n            \"propertyCode\": \"p1185353\",\n            \"propertyId\": 1214910,\n            \"voyagerPropertyCode\": \"StationA\",\n            \"voyagerPropertyId\": 4\n        },\n        {\n            \"propertyName\": \"The Station - Building B\",\n            \"propertyCode\": \"p1185367\",\n            \"propertyId\": 1214924,\n            \"voyagerPropertyCode\": \"StationB\",\n            \"voyagerPropertyId\": 5\n        },\n        {\n            \"propertyName\": \"The View\",\n            \"propertyCode\": \"p1605803\",\n            \"propertyId\": 1637483,\n            \"voyagerPropertyCode\": \".view\",\n            \"voyagerPropertyId\": 29\n        },\n        {\n            \"propertyName\": \"The View - Cliffside\",\n            \"propertyCode\": \"p1330899\",\n            \"propertyId\": 1360783,\n            \"voyagerPropertyCode\": \"ViewClif\",\n            \"voyagerPropertyId\": 15\n        },\n        {\n            \"propertyName\": \"The View - Hillside\",\n            \"propertyCode\": \"p1330901\",\n            \"propertyId\": 1360785,\n            \"voyagerPropertyCode\": \"ViewHill\",\n            \"voyagerPropertyId\": 13\n        },\n        {\n            \"propertyName\": \"The View - Trailside\",\n            \"propertyCode\": \"p1324734\",\n            \"propertyId\": 1354596,\n            \"voyagerPropertyCode\": \"ViewTrai\",\n            \"voyagerPropertyId\": 14\n        },\n        {\n            \"propertyName\": \"Z Test BC - The Station A\",\n            \"propertyCode\": \"p1602424\",\n            \"propertyId\": 1634102,\n            \"voyagerPropertyCode\": \"StationA\",\n            \"voyagerPropertyId\": 4\n        },\n        {\n            \"propertyName\": \"Z Test ONT - Sterling Square - Aurora\",\n            \"propertyCode\": \"p1612686\",\n            \"propertyId\": 1644380,\n            \"voyagerPropertyCode\": \"Sterauro\",\n            \"voyagerPropertyId\": 18\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get property images",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczOTM3NDE4NCwiaWF0IjoxNzM5Mzc0MTg0LCJleHAiOjE3Mzk0MDI5ODQsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM5Mzc0MTg0LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMkVGQTA2MUQwQjQ5RkFEMkJGQzM1MTIyQUVGN0FDN0UifQ.dt4DkIwjBIXyACyTBN_thWgRChbchEGvDu40cMjzjrhv8DcZvhY7b9OrYa1DaNYNgjjAaqVK0CHDZTuneCEGrrVimrkVqSqxGOmVaOldVuLugIdN7_26thZb3fdMBNuz60A4LV6zITFuKShOiLxeU1pqxjwN2B7ghJMDPrxe71kfAHytkH0itehW_uzr_e6pCajnvYGrCMwKMo-i46amWHkbpdiG_LJztbTgnRe6aFTKltd42EAqdY98-QVNG_CW07YmKyO6GdBaS2v526rEguRfkSRICONph_mvvkLrHtXql4CKT-2Tk_1ZxnAURi8v0magbNDSE7JhbQJ7w7XYoA",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\r\n    \"companyCode\": \"c00000129056\",\r\n    \"propertyCode\": \"p1343437\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/images/getpropertyimages",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "images",
+            "getpropertyimages"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\r\n    \"companyCode\": \"c00000129056\",\r\n    \"propertyCode\": \"p1612686\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/images/getpropertyimages",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "images",
+                "getpropertyimages"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 04 Feb 2025 15:18:41 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-c7g8j"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "CF-Cache-Status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "90cba27aa903aac8-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"images\": [\n        {\n            \"id\": 21706110,\n            \"title\": \"\",\n            \"imageURL\": \"https://cdn.rentcafe.com/dmslivecafe/2/126289/1 bed 1 bath floor plan.jpg\",\n            \"caption\": \"\",\n            \"altText\": \"the floor plan of 1 bedroom 141 sq ft\"\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get unit images",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczNzY0NDIwOCwiaWF0IjoxNzM3NjQ0MjA4LCJleHAiOjE3Mzc2NzMwMDgsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM3NjQzMzgxLCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRDgxQzVDQUNGQUQwQjZGOEZFQjdFRTM5NkE3ODE4NDYifQ.PWybOQS3hfW2Plzz7-K_WBK1njxysJMAH7UbxUVJ5Pd2GvN4rxM0fZFA2W4Y2QrGsDQE8b9h5_8Sn4ywPNxHTXAhJjPJ0HFHDNVGrc7TppoTRtmIPlzgVS-jJqVPx_NMpuEnEaZGqnZv-S-qqgdbGmoUSLbs0MrEMJ3r632Sh53Wy57TX1iYJe4R-jEAgauYcP7y0FXFBUr6BqiqHC_BMQvr1wWnHEDCGb3lGNljTIdfQ80sZ0Vc2ZGNGXfsaw-rZ0r6UB1vyeOkMZZ8h9MN9k03zlUcJ83pcxldT3C5fKqhLz1TF2ucCG-ee7nanxK_T91wdmdYXo2r4KUiP3Yosg",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1343437\",\n    \"apartmentName\": \"101\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/images/getunitimages",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "images",
+            "getunitimages"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1612686\",\n    \"apartmentName\": \"111\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/images/getunitimages",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "images",
+                "getunitimages"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 04 Feb 2025 16:16:28 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "YSISessionID=1ec53351-00bd-4ec0-95c1-834c5523791e; expires=Tue, 04 Feb 2025 16:36:28 GMT; path=/"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "90cbf7234ce9ac7e-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "get apartment availability",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1807628\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/apartmentavailability/getapartmentavailability",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "apartmentavailability",
+            "getapartmentavailability"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1605807\",\n    \"apartmentName\": \"111\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/apartmentavailability/getapartmentavailability",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "apartmentavailability",
+                "getapartmentavailability"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 04 Feb 2025 15:28:35 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-c7g8j"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "90cbb0fb8ae1ac18-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"apartmentAvailabilities\": [\n        {\n            \"propertyId\": 1637487,\n            \"voyagerPropertyId\": 18,\n            \"voyagerPropertyCode\": \"Sterauro\",\n            \"floorplanId\": 4698212,\n            \"floorplanName\": \"Apollo\",\n            \"apartmentId\": 32029906,\n            \"apartmentName\": \"111\",\n            \"beds\": 2,\n            \"baths\": 2,\n            \"sqft\": 895,\n            \"sqM\": 0,\n            \"minimumRent\": 2173,\n            \"maximumRent\": 2173,\n            \"deposit\": 0,\n            \"applyOnlineURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=RentalOptions&myOlePropertyId=1637487&FloorPlanID=4698212&UnitID=32029906&header=1\",\n            \"unitImageURLs\": \"\",\n            \"unitImageURLsArray\": [],\n            \"unitImageAltText\": \"\",\n            \"specials\": \"\",\n            \"amenities\": \"\",\n            \"availableDate\": \"04/01/2025\",\n            \"publishDate\": \"\",\n            \"delayApplicationInHours\": \"\",\n            \"unitStatus\": \"Notice Unrented\",\n            \"unitEmbedVideo\": \"\"\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get floor plans",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjlDNDZCQ0Y2N0FEQTFGNTk3REE5MjQxNDM2ODdCQ0IyRkIwOTYwNkRSUzI1NiIsIng1dCI6Im5FYTg5bnJhSDFsOXFTUVVOb2U4c3ZzSllHMCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTc2NjUxODE2NSwiaWF0IjoxNzY2NTE4MTY1LCJleHAiOjE3NjY1NDY5NjUsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzY2NTE4MTY1LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMUVFRTBBNTZFNkZDNzFBMkMyMjJDNDQ0OEI2MjMxNEIifQ.TjX-RgUk9_WVMfgCz2z9LsdcHJrU5kbkjncG5XhXFddGLIr_YSfyF6SndzzBTR0w_Z0-JU5DfmWClHGTjOT_D49DgRUSZiIflQFn_7kxgE_cGUf-IsCMGOnw2BHE4wYnaThTs4XIkWyGCGh_i6DNggWcsFBRR0ob9libds-VNhuZ3tOeIbgBGKOevkCGVEpMl1pwoqanx6rr0RsvWDE93bNT-GWEHoC-NmJ_nhv_h7NBJQJz9OeCczOODfrrQ3D59JfWr_X25dnEB-SQkNWftd2lBSRJZqMTAOkHCU7SHrT0295pANP4kO-wfXsWVDJSbZR1CPvYjFWOF_P0lw-oFg",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1914049\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/floorplan/getfloorplans",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "floorplan",
+            "getfloorplans"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczODY4MTEwOSwiaWF0IjoxNzM4NjgxMTA5LCJleHAiOjE3Mzg3MDk5MDksImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM4NjgxMTA5LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiRUQ4NUIwRjYxMERCNkRENzQ1MEFDODlCODBBRTFFODYifQ.KI_cmRkK5am3fvFlHehYGfHBfPmByUnGmYEC-6sqW1FDXHuvI05yoe913ZkkZaNd56-OHrX32l3qqx6lKOTZcS9tjjkCKqm84Y9LYGkPGZtl6kOqFPhuTAwZshVSJvIZNOkIs_TqkjmuI1yMmnUUYDsQA0zJnxFEGb54VmxcBa1lDt8FcZSyvTJpzuiQBzvbwWDhzVLxInJgW4wrH6n8bhnVs_UkD5JfsAJL2V5PZAkEK1bQ434xwDZkyzuTAHdMWHKMnIj04uAH7iZEE2dzZN4elFEiTllu0YKG-FcxjKU-nZ4W1Ed5om3-fll_IoLIz6j6YKRxXXCPwVKsAKiQ6A",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1605807\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/floorplan/getfloorplans",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "floorplan",
+                "getfloorplans"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 04 Feb 2025 15:05:16 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "YSISessionID=5b5a88f3-af7d-48fb-8d11-3a43de840ab0; expires=Tue, 04 Feb 2025 15:25:10 GMT; path=/"
+            },
+            {
+              "key": "Set-Cookie",
+              "value": "__cf_bm=Q8h50NUgiNL5WJdeTMLd9Aude0DlQQzVOylBzBfNKG8-1738681516-1.0.1.1-oA5h1QyE6xwCtKAhpxLcJMo4K1BThWSPpBDeQ.yIqmwc0CPWaWB3bnG92m4CfJdy7FSlfa.Z9NZFzIHsh9X.dA; path=/; expires=Tue, 04-Feb-25 15:35:16 GMT; domain=.basic.rentcafeapi.com; HttpOnly; Secure; SameSite=None"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "90cb8ead6a5cac1b-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"floorplans\": [\n        {\n            \"beds\": 1,\n            \"baths\": 1,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698210,\n            \"floorplanName\": \"Stellar\",\n            \"minimumSQFT\": 840,\n            \"maximumSQFT\": 840,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2177,\n            \"maximumRent\": 2177,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 2,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698210\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Stellar.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Stellar.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building A_Floorplans_0_Page_Stellar.png,005-CONKLIN2PIX-2.jpg,016-CONKLIN2PIX-13.jpg,013-CONKLIN2PIX-10.jpg,024-CONKLIN2PIX-21.jpg,031-CONKLIN2PIX-27.jpg,Shellard Lane Brantford Exterior Finals-3.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-6.jpg,IMG-8687.jpg\",\n            \"floorplanImageAltText\": \"a floor plan of a bedroom apartment,a living room with a blue couch and a coffee table,an open kitchen with stainless steel appliances and white cabinets,a kitchen with white cabinets and a counter with two stools,a bedroom with a bed and a mirror on the wall,a bathroom with a shower toilet and sink and a mirror,an apartment building with cars parked in a parking lot,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,a living room with blue couches and a coffee table,the gym has treadmills and other exercise equipment in a large room with windows,two red and green chairs in front of a building\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SA1b1dst\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 2,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698212,\n            \"floorplanName\": \"Apollo\",\n            \"minimumSQFT\": 895,\n            \"maximumSQFT\": 895,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2173,\n            \"maximumRent\": 2173,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698212\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Apollo.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Apollo.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building A_Floorplans_0_Page_Apollo.png,005-CONKLIN2PIX-2.jpg,016-CONKLIN2PIX-13.jpg,013-CONKLIN2PIX-10.jpg,024-CONKLIN2PIX-21.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,032-CONKLIN2PIX-29.jpg,Shellard Lane Brantford Exterior Finals-3.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-6.jpg,IMG-8687.jpg\",\n            \"floorplanImageAltText\": \"a floor plan of a bedroom apartment,a living room with a blue couch and a coffee table,an open kitchen with stainless steel appliances and white cabinets,a kitchen with white cabinets and a counter with two stools,a bedroom with a bed and a mirror on the wall,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,a washer and dryer in a small laundry room,an apartment building with cars parked in a parking lot,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,a living room with blue couches and a coffee table,the gym has treadmills and other exercise equipment in a large room with windows,two red and green chairs in front of a building\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SA2b2ba\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 2,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698213,\n            \"floorplanName\": \"Glow\",\n            \"minimumSQFT\": 889,\n            \"maximumSQFT\": 889,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2159,\n            \"maximumRent\": 2159,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698213\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Glow.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Glow.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building A_Floorplans_0_Page_Glow.png,005-CONKLIN2PIX-2.jpg,016-CONKLIN2PIX-13.jpg,013-CONKLIN2PIX-10.jpg,009-CONKLIN2PIX-6.jpg,024-CONKLIN2PIX-21.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,032-CONKLIN2PIX-29.jpg,Shellard Lane Brantford Exterior Finals-3.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,IMG-8687.jpg\",\n            \"floorplanImageAltText\": \"a floor plan of a bedroom apartment,a living room with a blue couch and a coffee table,an open kitchen with stainless steel appliances and white cabinets,a kitchen with white cabinets and a counter with two stools,an open living room and dining room with a table and chairs,a bedroom with a bed and a mirror on the wall,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,a washer and dryer in a small laundry room,an apartment building with cars parked in a parking lot,the gym has treadmills and other exercise equipment in a large room with windows,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,a living room with blue couches and a coffee table,two red and green chairs in front of a building\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SA2b2bg\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 2,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698214,\n            \"floorplanName\": \"Luna\",\n            \"minimumSQFT\": 901,\n            \"maximumSQFT\": 901,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2212,\n            \"maximumRent\": 2212,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698214\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Luna.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building A_Floorplans_0_Page_Luna.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building A_Floorplans_0_Page_Luna.png,005-CONKLIN2PIX-2.jpg,016-CONKLIN2PIX-13.jpg,013-CONKLIN2PIX-10.jpg,009-CONKLIN2PIX-6.jpg,024-CONKLIN2PIX-21.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,Shellard Lane Brantford Exterior Finals-3.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-6.jpg\",\n            \"floorplanImageAltText\": \"floor plan of the 2nd level floor plan,a living room with a blue couch and a coffee table,an open kitchen with stainless steel appliances and white cabinets,a kitchen with white cabinets and a counter with two stools,an open living room and dining room with a table and chairs,a bedroom with a bed and a mirror on the wall,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,an apartment building with cars parked in a parking lot,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,a living room with blue couches and a coffee table,the gym has treadmills and other exercise equipment in a large room with windows,a living room with a table and chairs,a living room with blue couches and a coffee table,the gym has treadmills and other exercise equipment in a large room with windows\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SA2b2bl\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 1,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698220,\n            \"floorplanName\": \"Chime\",\n            \"minimumSQFT\": 910,\n            \"maximumSQFT\": 910,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2252,\n            \"maximumRent\": 2252,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698220\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Chime.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Chime.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(2).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/013-CONKLIN2PIX-10(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8687(5).jpg\"\n            ],\n            \"floorplanImageName\": \"20220201_Sterling Square_Building D_Floorplans_Chime.jpg,005-CONKLIN2PIX-2.jpg,017-CONKLIN2PIX-14.jpg,013-CONKLIN2PIX-10.jpg,008-CONKLIN2PIX-5.jpg,024-CONKLIN2PIX-21.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,030-CONKLIN2PIX-26.jpg,Shellard Lane Brantford Exterior Finals-3.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,Shellard Lane Brantford Interior Finals-2.jpg,IMG-8687.jpg\",\n            \"floorplanImageAltText\": \"a floor plan for a two bedroom apartment,a living room with a blue couch and a coffee table,a kitchen with a large island and stainless steel appliances,a kitchen with white cabinets and a counter with two stools,a dining room with a table and chairs and a kitchen,a bedroom with a bed and a mirror on the wall,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,a bedroom with a closet and a bathroom with a toilet and a mirror,an apartment building with cars parked in a parking lot,the gym has treadmills and other exercise equipment in a large room with windows,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,a living room with blue couches and a coffee table,two red and green chairs in front of a building\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"ST2b1bc\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 2,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4698228,\n            \"floorplanName\": \"Soprano\",\n            \"minimumSQFT\": 977,\n            \"maximumSQFT\": 977,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2420,\n            \"maximumRent\": 2420,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4698228\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Soprano.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/028-CONKLIN2PIX(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/026-CONKLIN2PIX-23(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/020-CONKLIN2PIX-17(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/025-CONKLIN2PIX-22.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/029-CONKLIN2PIX-25(1).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/022-CONKLIN2PIX-19.jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Soprano.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/028-CONKLIN2PIX(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/026-CONKLIN2PIX-23(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/020-CONKLIN2PIX-17(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/025-CONKLIN2PIX-22.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/029-CONKLIN2PIX-25(1).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/022-CONKLIN2PIX-19.jpg\"\n            ],\n            \"floorplanImageName\": \"20220201_Sterling Square_Building D_Floorplans_Soprano.jpg,028-CONKLIN2PIX.jpg,006-CONKLIN2PIX-3.jpg,016-CONKLIN2PIX-13.jpg,026-CONKLIN2PIX-23.jpg,020-CONKLIN2PIX-17.jpg,025-CONKLIN2PIX-22.jpg,029-CONKLIN2PIX-25.jpg,022-CONKLIN2PIX-19.jpg\",\n            \"floorplanImageAltText\": \",an open living room and dining room with a couch and a table,an open living room with a couch and a coffee table,a large kitchen with white cabinets and stainless steel appliances,a dining room with a table and chairs and a kitchen,a corridor with white walls and wood flooring and a sink and stools,a bedroom with a white bed and a painting on the wall,a bedroom with a large white bed and a white door to a bathroom,a bathroom with a toilet and a shower and a sink\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"ST2b2bs\"\n        },\n        {\n            \"beds\": 1,\n            \"baths\": 1,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4699234,\n            \"floorplanName\": \"Dash\",\n            \"minimumSQFT\": 786,\n            \"maximumSQFT\": 786,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2029,\n            \"maximumRent\": 2029,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4699234\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building C_Dash.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/018-CONKLIN2PIX-15(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(9).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8653(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building C_Dash.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/018-CONKLIN2PIX-15(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(9).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8653(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building C_Dash.png,015-CONKLIN2PIX-12.jpg,011-CONKLIN2PIX-8.jpg,017-CONKLIN2PIX-14.jpg,016-CONKLIN2PIX-13.jpg,018-CONKLIN2PIX-15.jpg,008-CONKLIN2PIX-5.jpg,009-CONKLIN2PIX-6.jpg,005-CONKLIN2PIX-2.jpg,006-CONKLIN2PIX-3.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,030-CONKLIN2PIX-26.jpg,032-CONKLIN2PIX-29.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,IMG-8653.jpg,Shellard Lane Brantford Exterior Finals-3.jpg\",\n            \"floorplanImageAltText\": \"bedroom floor plan an in 2nd floor,a kitchen with white cabinets and a glass door,a kitchen with stainless steel appliances and white cabinets,a kitchen with a large island and stainless steel appliances,a modern kitchen with white cabinets and stainless steel appliances,an open kitchen and living room with a dining room table and chairs,a dining room with a table and chairs and a kitchen,an open living room and dining room with a table and chairs,a living room with a blue couch and a coffee table,an open living room with a couch and a coffee table,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,a bedroom with a closet and a bathroom with a toilet and a mirror,a washer and dryer in a small laundry room,the gym has treadmills and other exercise equipment in a large room with windows,a living room with blue couches and a coffee table,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,an open living room and kitchen in a new home,an apartment building with cars parked in a parking lot\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SP1b1bdd\"\n        },\n        {\n            \"beds\": 1,\n            \"baths\": 1,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4699236,\n            \"floorplanName\": \"Vivid\",\n            \"minimumSQFT\": 822,\n            \"maximumSQFT\": 822,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2156,\n            \"maximumRent\": 2156,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4699236\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building C_Vivid.png,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/018-CONKLIN2PIX-15(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(3).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(9).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8653(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Sterling Square_Building C_Vivid.png\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/017-CONKLIN2PIX-14(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/008-CONKLIN2PIX-5(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/009-CONKLIN2PIX-6(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/018-CONKLIN2PIX-15(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(3).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(9).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/IMG-8653(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\"\n            ],\n            \"floorplanImageName\": \"Sterling Square_Building C_Vivid.png,015-CONKLIN2PIX-12.jpg,011-CONKLIN2PIX-8.jpg,017-CONKLIN2PIX-14.jpg,016-CONKLIN2PIX-13.jpg,008-CONKLIN2PIX-5.jpg,009-CONKLIN2PIX-6.jpg,018-CONKLIN2PIX-15.jpg,005-CONKLIN2PIX-2.jpg,006-CONKLIN2PIX-3.jpg,024-CONKLIN2PIX-21.jpg,031-CONKLIN2PIX-27.jpg,030-CONKLIN2PIX-26.jpg,032-CONKLIN2PIX-29.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-1.jpg,Shellard Lane Brantford Interior Finals-3.jpg,IMG-8653.jpg,Shellard Lane Brantford Exterior Finals-3.jpg\",\n            \"floorplanImageAltText\": \"bedroom floor plan an in 2d,a kitchen with white cabinets and a glass door,a kitchen with stainless steel appliances and white cabinets,a kitchen with a large island and stainless steel appliances,a modern kitchen with white cabinets and stainless steel appliances,a dining room with a table and chairs and a kitchen,an open living room and dining room with a table and chairs,an open kitchen and living room with a dining room table and chairs,a living room with a blue couch and a coffee table,an open living room with a couch and a coffee table,a bedroom with two beds and purple walls and a window,a bathroom with a shower toilet and sink and a mirror,a bedroom with a closet and a bathroom with a toilet and a mirror,a washer and dryer in a small laundry room,the gym has treadmills and other exercise equipment in a large room with windows,a living room with blue couches and a coffee table,a living room with couches and chairs and a kitchen and stairs,a living room with a table and chairs,an open living room and kitchen in a new home,an apartment building with cars parked in a parking lot\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SP1b1bdv\"\n        },\n        {\n            \"beds\": 2,\n            \"baths\": 2,\n            \"tour360EmbedCode\": \"\",\n            \"fpVideoEmbedCode\": \"\",\n            \"propertyVideoEmbedCode\": \"\",\n            \"propertyId\": 1637487,\n            \"floorplanId\": 4699239,\n            \"floorplanName\": \"Harmony\",\n            \"minimumSQFT\": 883,\n            \"maximumSQFT\": 883,\n            \"minimumSQM\": 0,\n            \"maximumSQM\": 0,\n            \"minimumRent\": 2144,\n            \"maximumRent\": 2144,\n            \"minimumDeposit\": 0,\n            \"maximumDeposit\": 0,\n            \"availableUnitsCount\": 1,\n            \"availabilityURL\": \"https://sterlingsquare.securecafe.com/onlineleasing/sterling-square0/oleapplication.aspx?stepname=Apartments&myOlePropertyId=1637487&floorPlans=4699239\",\n            \"floorplanImageURL\": \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Harmony(1).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/028-CONKLIN2PIX(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/020-CONKLIN2PIX-17(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/026-CONKLIN2PIX-23(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/025-CONKLIN2PIX-22.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/029-CONKLIN2PIX-25(1).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/022-CONKLIN2PIX-19.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(4).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/021-CONKLIN2PIX-18.jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/019-CONKLIN2PIX-16(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(7).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(6).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg,https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\",\n            \"floorplanImageURLArray\": [\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/20220201_Sterling Square_Building D_Floorplans_Harmony(1).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/006-CONKLIN2PIX-3(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/028-CONKLIN2PIX(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/016-CONKLIN2PIX-13(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/020-CONKLIN2PIX-17(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/026-CONKLIN2PIX-23(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/025-CONKLIN2PIX-22.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/029-CONKLIN2PIX-25(1).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/022-CONKLIN2PIX-19.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/005-CONKLIN2PIX-2(4).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/021-CONKLIN2PIX-18.jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/015-CONKLIN2PIX-12(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/011-CONKLIN2PIX-8(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/019-CONKLIN2PIX-16(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-1(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/030-CONKLIN2PIX-26(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-6(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-2(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Interior Finals-3(5).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/024-CONKLIN2PIX-21(7).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/032-CONKLIN2PIX-29(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/027-CONKLIN2PIX-24(6).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/031-CONKLIN2PIX-27(8).jpg\",\n                \"https://cdngeneralcf.rentcafe.com/dmslivecafe/2/126289/Shellard Lane Brantford Exterior Finals-3(4).jpg\"\n            ],\n            \"floorplanImageName\": \"20220201_Sterling Square_Building D_Floorplans_Harmony.jpg,006-CONKLIN2PIX-3.jpg,028-CONKLIN2PIX.jpg,016-CONKLIN2PIX-13.jpg,020-CONKLIN2PIX-17.jpg,026-CONKLIN2PIX-23.jpg,025-CONKLIN2PIX-22.jpg,029-CONKLIN2PIX-25.jpg,032-CONKLIN2PIX-29.jpg,022-CONKLIN2PIX-19.jpg,030-CONKLIN2PIX-26.jpg,005-CONKLIN2PIX-2.jpg,021-CONKLIN2PIX-18.jpg,015-CONKLIN2PIX-12.jpg,011-CONKLIN2PIX-8.jpg,019-CONKLIN2PIX-16.jpg,Shellard Lane Brantford Interior Finals-1.jpg,030-CONKLIN2PIX-26.jpg,Shellard Lane Brantford Interior Finals-6.jpg,Shellard Lane Brantford Interior Finals-2.jpg,Shellard Lane Brantford Interior Finals-3.jpg,024-CONKLIN2PIX-21.jpg,032-CONKLIN2PIX-29.jpg,027-CONKLIN2PIX-24.jpg,031-CONKLIN2PIX-27.jpg,Shellard Lane Brantford Exterior Finals-3.jpg\",\n            \"floorplanImageAltText\": \",an open living room with a couch and a coffee table,an open living room and dining room with a couch and a table,a large kitchen with white cabinets and stainless steel appliances,a corridor with white walls and wood flooring and a sink and stools,a dining room with a table and chairs and a kitchen,a bedroom with a white bed and a painting on the wall,a bedroom with a large white bed and a white door to a bathroom,a washer and dryer in a small laundry room,a bathroom with a toilet and a shower and a sink,a bedroom with a closet and a bathroom with a toilet and a mirror,a living room with a blue couch and a coffee table,a bathroom with a toilet and a shower and a sink,a kitchen with white cabinets and appliances and a coffee sign,a kitchen with stainless steel appliances and white cabinets,a kitchen with a bar and stools in front of a white door,a living room with couches and chairs and a kitchen and stairs,a bedroom with a closet and a bathroom with a toilet and a mirror,the gym has treadmills and other exercise equipment in a large room with windows,a living room with blue couches and a coffee table,a living room with a table and chairs,a bedroom with two beds and purple walls and a window,a washer and dryer in a small laundry room,a bedroom with two windows and a bed,a bathroom with a shower toilet and sink and a mirror,an apartment building with cars parked in a parking lot\",\n            \"propertyShowsSpecials\": 0,\n            \"floorplanHasSpecials\": 0,\n            \"unitTypeMapping\": \"SP2b2bh\"\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get property details",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczOTM3NDE4NCwiaWF0IjoxNzM5Mzc0MTg0LCJleHAiOjE3Mzk0MDI5ODQsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM5Mzc0MTg0LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMkVGQTA2MUQwQjQ5RkFEMkJGQzM1MTIyQUVGN0FDN0UifQ.dt4DkIwjBIXyACyTBN_thWgRChbchEGvDu40cMjzjrhv8DcZvhY7b9OrYa1DaNYNgjjAaqVK0CHDZTuneCEGrrVimrkVqSqxGOmVaOldVuLugIdN7_26thZb3fdMBNuz60A4LV6zITFuKShOiLxeU1pqxjwN2B7ghJMDPrxe71kfAHytkH0itehW_uzr_e6pCajnvYGrCMwKMo-i46amWHkbpdiG_LJztbTgnRe6aFTKltd42EAqdY98-QVNG_CW07YmKyO6GdBaS2v526rEguRfkSRICONph_mvvkLrHtXql4CKT-2Tk_1ZxnAURi8v0magbNDSE7JhbQJ7w7XYoA",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1343437\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/property/getpropertydetails",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "property",
+            "getpropertydetails"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczOTM3NDE4NCwiaWF0IjoxNzM5Mzc0MTg0LCJleHAiOjE3Mzk0MDI5ODQsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM5Mzc0MTg0LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMkVGQTA2MUQwQjQ5RkFEMkJGQzM1MTIyQUVGN0FDN0UifQ.dt4DkIwjBIXyACyTBN_thWgRChbchEGvDu40cMjzjrhv8DcZvhY7b9OrYa1DaNYNgjjAaqVK0CHDZTuneCEGrrVimrkVqSqxGOmVaOldVuLugIdN7_26thZb3fdMBNuz60A4LV6zITFuKShOiLxeU1pqxjwN2B7ghJMDPrxe71kfAHytkH0itehW_uzr_e6pCajnvYGrCMwKMo-i46amWHkbpdiG_LJztbTgnRe6aFTKltd42EAqdY98-QVNG_CW07YmKyO6GdBaS2v526rEguRfkSRICONph_mvvkLrHtXql4CKT-2Tk_1ZxnAURi8v0magbNDSE7JhbQJ7w7XYoA",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1343437\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/property/getpropertydetails",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "property",
+                "getpropertydetails"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 12 Feb 2025 15:59:19 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "910dc9037f82ac8a-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"properties\": [\n        {\n            \"apartmentSettings\": {\n                \"revenueManagementEnabled\": false,\n                \"availabilityDaysFromUserMoveIn\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleStart\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleEnd\": 15,\n                \"daysFromCurrentDateMoveInRestrictedForAvailableUnits\": 1,\n                \"monthsAvailabilityRestrictedTo\": 0,\n                \"percentRentOverMaxToIncludeApartmentSearch\": 0,\n                \"maxApartmentsDisplayed\": 5\n            },\n            \"name\": \"Sterling Square - Beacon\",\n            \"address\": \"395B Conklin Road\",\n            \"city\": \"Brantford\",\n            \"state\": \"ON\",\n            \"zipcode\": \"N3T 0S6\",\n            \"url\": \"sterling-square-beacon.rentcafewebsite.com\",\n            \"description\": \"Located in the peaceful southwest area of Brantford, Sterling Square is home to 208 modern-inspired homes. Surrounded by lush parks, hiking and biking trails, and the Grand River, this is the perfect neighborhood to enjoy the outdoors, while being 7 minutes away from the downtown core.Sterlingsquare.ca\",\n            \"email\": \"community@sterlingsquare.ca\",\n            \"phone\": \"(519) 770-6816\",\n            \"latitude\": 43.120504,\n            \"longitude\": -80.297931,\n            \"propertyCode\": \"p1343437\",\n            \"voyagerPropertyCode\": \"Sterbeac\",\n            \"propertyId\": 1373372\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get marketing details",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTc0MzQ1NTg4NSwiaWF0IjoxNzQzNDU1ODg1LCJleHAiOjE3NDM0ODQ2ODUsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzQzNDU1ODg1LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiNzM5OUQ4OTcwMjI2Nzc0Mzk4NEI4MDM3MDdBM0JFNTcifQ.LQl_USXITTC_n1fExchl6eUY0QrdfZVElwZquPwYD-frbquNidG6Ue9Y2gSJY-3vn8QYKzRxAuH9Kbc461wJxi2euALoLpdLUz_MJnyFq-i36hM4qQ_aOxOoenX-crv0COnsuK5FBHGgnjRQ63uT_F6F3FkEJU1H0WzfCOvMYap92JT5Bgp5tw_b3AXIxa6_-aDDpnao2pkyGJOBJqYDzjSBGNhhItpNNzGuiiTOzZlXcCOQnlFyjb3yT9mBju5vuHVmMl64CezkdsjIm34AoNQFhT5lEYLVue-GXrC4blAAFB5l05RRlfIuqrofzIPRQMxe5HVl7niyTM6s6dkiLg",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1295988\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/property/getmarketingdetails",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "property",
+            "getmarketingdetails"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczOTM3NDE4NCwiaWF0IjoxNzM5Mzc0MTg0LCJleHAiOjE3Mzk0MDI5ODQsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM5Mzc0MTg0LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMkVGQTA2MUQwQjQ5RkFEMkJGQzM1MTIyQUVGN0FDN0UifQ.dt4DkIwjBIXyACyTBN_thWgRChbchEGvDu40cMjzjrhv8DcZvhY7b9OrYa1DaNYNgjjAaqVK0CHDZTuneCEGrrVimrkVqSqxGOmVaOldVuLugIdN7_26thZb3fdMBNuz60A4LV6zITFuKShOiLxeU1pqxjwN2B7ghJMDPrxe71kfAHytkH0itehW_uzr_e6pCajnvYGrCMwKMo-i46amWHkbpdiG_LJztbTgnRe6aFTKltd42EAqdY98-QVNG_CW07YmKyO6GdBaS2v526rEguRfkSRICONph_mvvkLrHtXql4CKT-2Tk_1ZxnAURi8v0magbNDSE7JhbQJ7w7XYoA",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1343437\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/property/getpropertydetails",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "property",
+                "getpropertydetails"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 12 Feb 2025 15:59:19 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "910dc9037f82ac8a-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"properties\": [\n        {\n            \"apartmentSettings\": {\n                \"revenueManagementEnabled\": false,\n                \"availabilityDaysFromUserMoveIn\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleStart\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleEnd\": 15,\n                \"daysFromCurrentDateMoveInRestrictedForAvailableUnits\": 1,\n                \"monthsAvailabilityRestrictedTo\": 0,\n                \"percentRentOverMaxToIncludeApartmentSearch\": 0,\n                \"maxApartmentsDisplayed\": 5\n            },\n            \"name\": \"Sterling Square - Beacon\",\n            \"address\": \"395B Conklin Road\",\n            \"city\": \"Brantford\",\n            \"state\": \"ON\",\n            \"zipcode\": \"N3T 0S6\",\n            \"url\": \"sterling-square-beacon.rentcafewebsite.com\",\n            \"description\": \"Located in the peaceful southwest area of Brantford, Sterling Square is home to 208 modern-inspired homes. Surrounded by lush parks, hiking and biking trails, and the Grand River, this is the perfect neighborhood to enjoy the outdoors, while being 7 minutes away from the downtown core.Sterlingsquare.ca\",\n            \"email\": \"community@sterlingsquare.ca\",\n            \"phone\": \"(519) 770-6816\",\n            \"latitude\": 43.120504,\n            \"longitude\": -80.297931,\n            \"propertyCode\": \"p1343437\",\n            \"voyagerPropertyCode\": \"Sterbeac\",\n            \"propertyId\": 1373372\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get website media",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTc0MzQ1NTg4NSwiaWF0IjoxNzQzNDU1ODg1LCJleHAiOjE3NDM0ODQ2ODUsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzQzNDU1ODg1LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiNzM5OUQ4OTcwMjI2Nzc0Mzk4NEI4MDM3MDdBM0JFNTcifQ.LQl_USXITTC_n1fExchl6eUY0QrdfZVElwZquPwYD-frbquNidG6Ue9Y2gSJY-3vn8QYKzRxAuH9Kbc461wJxi2euALoLpdLUz_MJnyFq-i36hM4qQ_aOxOoenX-crv0COnsuK5FBHGgnjRQ63uT_F6F3FkEJU1H0WzfCOvMYap92JT5Bgp5tw_b3AXIxa6_-aDDpnao2pkyGJOBJqYDzjSBGNhhItpNNzGuiiTOzZlXcCOQnlFyjb3yT9mBju5vuHVmMl64CezkdsjIm34AoNQFhT5lEYLVue-GXrC4blAAFB5l05RRlfIuqrofzIPRQMxe5HVl7niyTM6s6dkiLg",
+            "type": "text"
+          },
+          {
+            "key": "vendor",
+            "value": "contact@rhenti.com",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1295988\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://basic.rentcafeapi.com/property/websitemedia",
+          "protocol": "https",
+          "host": [
+            "basic",
+            "rentcafeapi",
+            "com"
+          ],
+          "path": [
+            "property",
+            "websitemedia"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkFFNDUyRDVGNzk2RjU0QUUyMUNDODZCMkU0NDhBOEFGMEE5MjkzOUVSUzI1NiIsIng1dCI6InJrVXRYM2x2Vks0aHpJYXk1RWlvcndxU2s1NCIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL3JlbnRjYWZlYXBpcG9ydGFsLnlhcmRpb25lLmNvbSIsIm5iZiI6MTczOTM3NDE4NCwiaWF0IjoxNzM5Mzc0MTg0LCJleHAiOjE3Mzk0MDI5ODQsImF1ZCI6Imh0dHBzOi8vcmVudGNhZmVhcGlwb3J0YWwueWFyZGlvbmUuY29tL3Jlc291cmNlcyIsInNjb3BlIjpbIkFQSSIsIm9wZW5pZCIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXSwiY2xpZW50X2lkIjoicmVudGNhZmVhcGlwb3J0YWxfYXBpYWNjZXNzIiwic3ViIjoiNWQyZDliMDEtNmRiOC00NzM3LWIyYjEtMmU2ZTUyZmRhMTYzIiwiYXV0aF90aW1lIjoxNzM5Mzc0MTg0LCJpZHAiOiJsb2NhbCIsIndpbmFjY291bnRuYW1lIjoiY29udGFjdEByaGVudGkuY29tIiwieU5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJjb250YWN0QHJoZW50aS5jb20iLCJlbWFpbCI6ImNvbnRhY3RAcmhlbnRpLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoiZmFsc2UiLCJnaXZlbl9uYW1lIjoiUmhlbnRpIEx0ZCIsImZhbWlseV9uYW1lIjoiMTAwMTA5Mjk1IiwianRpIjoiMkVGQTA2MUQwQjQ5RkFEMkJGQzM1MTIyQUVGN0FDN0UifQ.dt4DkIwjBIXyACyTBN_thWgRChbchEGvDu40cMjzjrhv8DcZvhY7b9OrYa1DaNYNgjjAaqVK0CHDZTuneCEGrrVimrkVqSqxGOmVaOldVuLugIdN7_26thZb3fdMBNuz60A4LV6zITFuKShOiLxeU1pqxjwN2B7ghJMDPrxe71kfAHytkH0itehW_uzr_e6pCajnvYGrCMwKMo-i46amWHkbpdiG_LJztbTgnRe6aFTKltd42EAqdY98-QVNG_CW07YmKyO6GdBaS2v526rEguRfkSRICONph_mvvkLrHtXql4CKT-2Tk_1ZxnAURi8v0magbNDSE7JhbQJ7w7XYoA",
+                "type": "text"
+              },
+              {
+                "key": "vendor",
+                "value": "contact@rhenti.com",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n    \"apiToken\": \"fdf9d31a-5c8b-4701-8e5c-eba2bcf22772\",\n    \"companyCode\": \"c00000129056\",\n    \"propertyCode\": \"p1343437\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://basic.rentcafeapi.com/property/getpropertydetails",
+              "protocol": "https",
+              "host": [
+                "basic",
+                "rentcafeapi",
+                "com"
+              ],
+              "path": [
+                "property",
+                "getpropertydetails"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Wed, 12 Feb 2025 15:59:19 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "Origin, Content-Type, X-Auth-Token, Authorization"
+            },
+            {
+              "key": "Access-Control-Allow-Methods",
+              "value": "GET, POST"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Service",
+              "value": "rentcafe-basicapi-prod-1.rentcafe.svc.cluster.local"
+            },
+            {
+              "key": "X-Upstream",
+              "value": "10.96.172.239:80"
+            },
+            {
+              "key": "X-Proxy",
+              "value": "rentcafe-basicapi-nginx-prod-1-7dbf5c7cb-kv24q"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Yardi"
+            },
+            {
+              "key": "X-Loc",
+              "value": "pct-prod-caffeine-prod"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "Server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "CF-RAY",
+              "value": "910dc9037f82ac8a-YYZ"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"properties\": [\n        {\n            \"apartmentSettings\": {\n                \"revenueManagementEnabled\": false,\n                \"availabilityDaysFromUserMoveIn\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleStart\": 0,\n                \"daysAfterUnitAvailableMoveInPossibleEnd\": 15,\n                \"daysFromCurrentDateMoveInRestrictedForAvailableUnits\": 1,\n                \"monthsAvailabilityRestrictedTo\": 0,\n                \"percentRentOverMaxToIncludeApartmentSearch\": 0,\n                \"maxApartmentsDisplayed\": 5\n            },\n            \"name\": \"Sterling Square - Beacon\",\n            \"address\": \"395B Conklin Road\",\n            \"city\": \"Brantford\",\n            \"state\": \"ON\",\n            \"zipcode\": \"N3T 0S6\",\n            \"url\": \"sterling-square-beacon.rentcafewebsite.com\",\n            \"description\": \"Located in the peaceful southwest area of Brantford, Sterling Square is home to 208 modern-inspired homes. Surrounded by lush parks, hiking and biking trails, and the Grand River, this is the perfect neighborhood to enjoy the outdoors, while being 7 minutes away from the downtown core.Sterlingsquare.ca\",\n            \"email\": \"community@sterlingsquare.ca\",\n            \"phone\": \"(519) 770-6816\",\n            \"latitude\": 43.120504,\n            \"longitude\": -80.297931,\n            \"propertyCode\": \"p1343437\",\n            \"voyagerPropertyCode\": \"Sterbeac\",\n            \"propertyId\": 1373372\n        }\n    ],\n    \"errorCode\": 200,\n    \"errorMessage\": \"\"\n}"
+        }
+      ]
+    }
+  ]
+}
