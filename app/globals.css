@@ -17,3 +17,16 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Electron: draggable title bar; interactive elements stay clickable */
+.electron-drag {
+  -webkit-app-region: drag;
+  app-region: drag;
+}
+.electron-drag a,
+.electron-drag button,
+.electron-drag select,
+.electron-drag input {
+  -webkit-app-region: no-drag;
+  app-region: no-drag;
+}

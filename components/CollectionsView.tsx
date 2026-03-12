@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
+import { useIsElectron } from "@/hooks/useIsElectron";
 import type { CollectionDoc, EnvironmentDoc, RequestDoc, SelectedNode } from "@/lib/api-types";
 import CollectionsSidebar from "./CollectionsSidebar";
 import RequestEditor from "./RequestEditor";
@@ -32,6 +33,7 @@ export default function CollectionsView({
   const [sendingRequest, setSendingRequest] = useState(false);
   const [collectionNameEdit, setCollectionNameEdit] = useState("");
   const [showImportModal, setShowImportModal] = useState(false);
+  const isElectron = useIsElectron();
 
   const selectedCollection = selectedNode?.type === "collection"
     ? collections.find((c) => c._id === selectedNode.id)
@@ -243,7 +245,11 @@ export default function CollectionsView({
 
   return (
     <>
-      <header className="flex items-center justify-between border-b border-slate-800 px-4 py-2">
+      <header
+        className={`flex items-center justify-between border-b border-slate-800 py-2 pr-4 ${
+          isElectron ? "pl-24 pt-8 electron-drag" : "pl-4 pt-2"
+        }`}
+      >
         <div className="flex items-center gap-4">
           <span className="font-semibold text-slate-100">Mini Postman</span>
           <a

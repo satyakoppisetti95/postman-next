@@ -97,6 +97,7 @@ async function createWindow(port) {
       nodeIntegration: false,
       contextIsolation: true,
       webSecurity: false, // disables CORS enforcement
+      preload: path.join(__dirname, "preload.js"),
     },
   });
 
