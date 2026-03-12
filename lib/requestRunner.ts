@@ -62,12 +62,26 @@ export async function runHttpRequest(
     }
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 60_000);
+
   const start = performance.now();
-  const res = await fetch(urlObj.toString(), {
-    method: reqDef.method,
-    headers,
-    body,
-  });
+  let res: Response;
+  try {
+    res = await fetch(urlObj.toString(), {
+      method: reqDef.method,
+      headers,
+      body,
+      signal: controller.signal,
+    });
+  } catch (err) {
+    clearTimeout(timeoutId);
+    if (err instanceof Error && err.name === "AbortError") {
+      throw new Error("Request timed out after 60s");
+    }
+    throw err;
+  }
+  clearTimeout(timeoutId);
   const end = performance.now();
   const durationMs = Math.round(end - start);
 

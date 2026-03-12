@@ -5,10 +5,20 @@ import type { RunResult } from "@/lib/requestRunner";
 
 interface ResponseViewerProps {
   result: RunResult | null;
+  loading?: boolean;
 }
 
-export default function ResponseViewer({ result }: ResponseViewerProps) {
+export default function ResponseViewer({ result, loading = false }: ResponseViewerProps) {
   const [activeTab, setActiveTab] = useState<"body" | "headers" | "raw">("body");
+
+  if (loading) {
+    return (
+      <div className="flex-1 flex items-center justify-center text-slate-400 p-4 text-sm gap-2">
+        <span className="inline-block h-4 w-4 rounded-full border-2 border-orange-500 border-t-transparent animate-spin" />
+        Sending request…
+      </div>
+    );
+  }
 
   if (!result) {
     return (

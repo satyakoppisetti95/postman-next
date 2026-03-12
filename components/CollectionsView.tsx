@@ -8,10 +8,7 @@ import CollectionsSidebar from "./CollectionsSidebar";
 import RequestEditor from "./RequestEditor";
 import ResponseViewer from "./ResponseViewer";
 import ImportPostmanModal from "./ImportPostmanModal";
-import {
-  runHttpRequestClient,
-  type RunResult,
-} from "@/lib/requestRunnerClient";
+import type { RunResult } from "@/lib/requestRunner";
 
 interface CollectionsViewProps {
   initialCollections: CollectionDoc[];
@@ -29,6 +26,7 @@ export default function CollectionsView({
   const [selectedNode, setSelectedNode] = useState<SelectedNode>(null);
   const [response, setResponse] = useState<RunResult | null>(null);
   const [saving, setSaving] = useState(false);
+  const [sendingRequest, setSendingRequest] = useState(false);
   const [collectionNameEdit, setCollectionNameEdit] = useState("");
   const [showImportModal, setShowImportModal] = useState(false);
 
@@ -323,21 +321,40 @@ export default function CollectionsView({
               request={selectedRequest ?? null}
               envVars={envVars}
               onSave={handleSaveRequest}
+              sendingRequest={sendingRequest}
               onSend={async (req) => {
+                setSendingRequest(true);
+                setResponse(null);
                 try {
-                  const result = await runHttpRequestClient(req, envVars);
-                  setResponse(result);
-                } catch (e) {
+                  const r = await fetch("/api/run-request", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ request: req, envVars }),
+                  });
+                  const data = await r.json().catch(() => ({}));
+                  if (data.status !== undefined) {
+                    setResponse(data);
+                  } else {
+                    setResponse({
+                      status: r.status,
+                      statusText: r.statusText || "Error",
+                      headers: {},
+                      durationMs: 0,
+                      bodyText: data.error
+                        ? JSON.stringify({ error: data.error }, null, 2)
+                        : r.statusText || "Request failed",
+                    });
+                  }
+                } catch {
                   setResponse({
                     status: 0,
                     statusText: "Error",
                     headers: {},
                     durationMs: 0,
-                    bodyText:
-                      e instanceof Error
-                        ? e.message
-                        : "Network error (e.g. CORS or unreachable host).",
+                    bodyText: "Network error or request failed.",
                   });
+                } finally {
+                  setSendingRequest(false);
                 }
               }}
               saving={saving}
@@ -345,7 +362,7 @@ export default function CollectionsView({
             />
           )}
           <div className="border-t border-slate-800 flex-1 min-h-0 flex flex-col">
-            <ResponseViewer result={response} />
+            <ResponseViewer result={response} loading={sendingRequest} />
           </div>
         </main>
       </div>

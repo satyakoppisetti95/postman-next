@@ -24,6 +24,7 @@ interface RequestEditorProps {
   onSave: (req: RequestDoc) => void;
   onSend: (req: RequestDoc) => void;
   saving: boolean;
+  sendingRequest?: boolean;
   collectionId: string | null;
 }
 
@@ -33,11 +34,11 @@ export default function RequestEditor({
   onSave,
   onSend,
   saving,
+  sendingRequest = false,
   collectionId,
 }: RequestEditorProps) {
   const [activeTab, setActiveTab] = useState<"headers" | "body" | "auth">("headers");
   const [edited, setEdited] = useState<RequestDoc | null>(null);
-  const [sending, setSending] = useState(false);
 
   useEffect(() => {
     if (request) {
@@ -169,11 +170,9 @@ export default function RequestEditor({
   );
 
   const handleSend = useCallback(() => {
-    if (!edited || !edited._id) return;
-    setSending(true);
+    if (!edited || !edited._id || sendingRequest) return;
     onSend(edited as RequestDoc);
-    setTimeout(() => setSending(false), 500);
-  }, [edited, onSend]);
+  }, [edited, onSend, sendingRequest]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -233,11 +232,11 @@ export default function RequestEditor({
         <button
           type="button"
           onClick={handleSend}
-          disabled={sending}
+          disabled={sendingRequest}
           className="rounded bg-orange-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-orange-500 disabled:opacity-50 flex items-center gap-2"
         >
           <Send className="h-4 w-4" />
-          Send
+          {sendingRequest ? "Sending…" : "Send"}
         </button>
         {collectionId && (
           <button
