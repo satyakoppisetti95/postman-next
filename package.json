@@ -1,12 +1,18 @@
 {
-  "name": "postman-next",
+  "name": "mini-postman",
   "version": "0.1.0",
   "private": true,
+  "main": "main/electron.js",
+  "author": "Mini Postman",
+  "description": "Desktop API client with collections, environments, and request runner",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "electron:dev": "concurrently --kill-others \"next dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "next build && electron-builder",
+    "electron:pack": "next build && electron-builder --dir"
   },
   "dependencies": {
     "next": "14.2.18",
@@ -25,10 +31,56 @@
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "concurrently": "^9.1.0",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.18",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.minipostman.app",
+    "productName": "Mini Postman",
+    "files": [
+      "main/**/*",
+      ".next/**/*",
+      "public/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "next.config.js"
+    ],
+    "mac": {
+      "target": [
+        { "target": "dmg", "arch": ["universal"] },
+        { "target": "zip", "arch": ["universal"] }
+      ],
+      "icon": "public/icon.icns",
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": ["nsis"],
+      "icon": "public/icon.ico"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "public/icon.png",
+      "category": "Development"
+    },
+    "directories": {
+      "output": "release"
+    },
+    "extraResources": [
+      {
+        "from": ".next",
+        "to": ".next"
+      },
+      {
+        "from": "node_modules",
+        "to": "node_modules"
+      }
+    ]
   }
 }

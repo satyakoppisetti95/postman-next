@@ -8,7 +8,10 @@ import CollectionsSidebar from "./CollectionsSidebar";
 import RequestEditor from "./RequestEditor";
 import ResponseViewer from "./ResponseViewer";
 import ImportPostmanModal from "./ImportPostmanModal";
-import type { RunResult } from "@/lib/requestRunner";
+import {
+  runHttpRequestClient,
+  type RunResult,
+} from "@/lib/requestRunnerClient";
 
 interface CollectionsViewProps {
   initialCollections: CollectionDoc[];
@@ -326,32 +329,18 @@ export default function CollectionsView({
                 setSendingRequest(true);
                 setResponse(null);
                 try {
-                  const r = await fetch("/api/run-request", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ request: req, envVars }),
-                  });
-                  const data = await r.json().catch(() => ({}));
-                  if (data.status !== undefined) {
-                    setResponse(data);
-                  } else {
-                    setResponse({
-                      status: r.status,
-                      statusText: r.statusText || "Error",
-                      headers: {},
-                      durationMs: 0,
-                      bodyText: data.error
-                        ? JSON.stringify({ error: data.error }, null, 2)
-                        : r.statusText || "Request failed",
-                    });
-                  }
-                } catch {
+                  const result = await runHttpRequestClient(req, envVars);
+                  setResponse(result);
+                } catch (e) {
                   setResponse({
                     status: 0,
                     statusText: "Error",
                     headers: {},
                     durationMs: 0,
-                    bodyText: "Network error or request failed.",
+                    bodyText:
+                      e instanceof Error
+                        ? e.message
+                        : "Network error or unreachable host.",
                   });
                 } finally {
                   setSendingRequest(false);
